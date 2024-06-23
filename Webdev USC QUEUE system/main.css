@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(80deg, rgba(233,151,199,1) 0%, rgba(198,96,190,0.9486169467787114) 32%, rgba(148,187,233,1) 100%);
+    overflow-x: hidden;
+}
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1; 
+}
+
+.container {
+    position: relative; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(80deg, rgba(233, 151, 199, 1) 0%, rgba(198, 96, 190, 0.9486169467787114) 32%, rgba(148, 187, 233, 1) 100%);
+    z-index: -2; 
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Images used/download.gif');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; 
+    z-index: -1;
+}
+
+
+.bubbles1 {
+    width: 50rem;
+    position: auto; 
+    top: 0;
+    padding-left: 10em;
+    left: 0; 
+    z-index: -1;
+    pointer-events: none; 
+}
+
+.gif1 {
+    width: 20rem;
+    position: absolute;
+    top: -50;
+    right: 50;
+    z-index: 1;
+    padding-left: 60em;
+    opacity: 80%;
+    pointer-events: none; 
+}
+
+.form-section {
+    position: relative;
+    z-index: 2;
+    margin-left: 8rem;
+    background: white;
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-section .logo {
+    width: 150px;
+    margin-bottom: 1em;
+}
+
+
+.form-section h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #6A0DAD;
+}
+
+.form-section p {
+    margin: 0.5em 0;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-section input {
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+.form-section button {
+    padding: 0.75em;
+    background-color: #6A0DAD;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+    background-color: #5a0c90;
+}
+
+
+.extra-content {
+    padding: 2em;
+    background: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.extra-content section {
+    margin: 2em 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    border-top: 1px solid #ccc;
+}
+
+.login-link {
+    text-decoration: none;
+    color: #6A0DAD;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.login-link:hover {
+    color: #5a0c90;
+    border-bottom: 2px solid #5a0c90;
+}
+
+section.terms, section.about {
+    background: white;
+    padding: 2em;
+    margin: 2em 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.terms h2, section.about h2 {
+    font-size: 2em;
+    color: #6A0DAD;
+    margin-bottom: 1em;
+}
+
+section.terms h3, section.about h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+section.terms p, section.about p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+section.privacy {
+    background: white;
+    padding: 2em;
+    margin: 2em 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.privacy h2 {
+    font-size: 2em;
+    color: #6A0DAD;
+    margin-bottom: 1em;
+}
+
+section.privacy h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+section.privacy p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.scroll-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #6A0DAD;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.scroll-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.scroll-btn:hover {
+    background-color: #8a2be2;
+}
+
+.signup-form select {
+    width: 100%; 
+    padding: 10px 15px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 25px;
+    font-size: 16px; 
+    background-color: white; 
+    color: #6A0DAD; 
+    appearance: none; 
+    background-image: url(''); 
+    background-repeat: no-repeat; 
+    background-position: right 10px center; 
+    background-size: 10px 10px; 
+}
+
+.signup-form select:focus {
+    border-color: #6A0DAD; 
+    outline: none; /
+}
+
+.signup-form option {
+    color: #6A0DAD; 
+}
+
+
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-form input {
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    width: calc(100% - 1.5em);
+}
+
+.login-form button {
+    padding: 0.75em;
+    background-color: #6A0DAD;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #5a0c90;
+}
+
